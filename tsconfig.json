@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": ".",
+    "rootDir": ".",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "allowJs": true
+  },
+  "include": [ "src" ],
+  "exclude": [ "node_modules" ]
+}

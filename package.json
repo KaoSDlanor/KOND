@@ -1,0 +1,37 @@
+{
+  "name": "kond",
+  "version": "1.0.0",
+  "description": "Kao DND",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "DND"
+  ],
+  "author": "Daniel Olivier (kaosdlanor@gmail.com)",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.6.11",
+    "vue-property-decorator": "^9.0.0"
+  },
+  "devDependencies": {
+    "css-loader": "^4.2.1",
+    "del": "^5.1.0",
+    "file-loader": "^6.0.0",
+    "gulp": "^4.0.2",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "ignore-loader": "^0.1.2",
+    "source-map-loader": "^1.0.1",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^8.0.2",
+    "typescript": "^3.9.7",
+    "vue-class-component": "^7.2.5",
+    "vue-template-compiler": "^2.6.11",
+    "vue-template-loader": "^1.1.0",
+    "webpack-stream": "^5.2.1"
+  }
+}

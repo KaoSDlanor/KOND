@@ -1,0 +1,101 @@
+<svg
+  :class="['node',$style.node,NodeData.Selected ? 'selected' : '',NodeData.Selected ? $style.selected : '']"
+  :style="NodeStyle"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/svg"
+  :x="X"
+  :y="Y"
+  :width="Width"
+  :height="Height"
+  tabindex="0"
+>
+  <rect :width="Width" :height="Height"></rect>
+  <foreignObject :x="RX" :y="RY" :width="Width - RX * 2" :height="Height - RY * 2">
+    <div :class="['node-label',$style['node-label']]" xmlns="http://www.w3.org/1999/xhtml">{{NodeData.Label}}</div>
+  </foreignObject>
+
+  <svg :class="['node-control','node-control-edit',$style['node-control'],$style['node-control-edit']]" :width="ColumnWidth * ControlScale" :height="RowHeight * ControlScale" viewBox="0 0 100 100">
+    <path
+      d="
+        M 0,   0
+        L 100, 0
+        L 100, 100
+        L 0,   100
+        L 0,   0
+
+        M 20,  80
+        L 20,  60
+        L 65,  15
+        L 75,  15
+        L 85,  25
+        L 85,  35
+        L 40,  80
+        L 20,  80
+
+        M 55,  25
+        L 70,  40
+      "
+    />
+  </svg>
+
+  <svg :class="['node-control','node-control-move',$style['node-control'],$style['node-control-move']]" :x="Width - ColumnWidth * ControlScale" :width="ColumnWidth * ControlScale" :height="RowHeight * ControlScale" viewBox="0 0 100 100">
+    <path
+      d="
+        M 0,   0
+        L 100, 0
+        L 100, 100
+        L 0,   100
+        L 0,   0
+
+        M 20,  50
+        L 80,  50
+
+        M 50,  20
+        L 50,  80
+        
+        M 30,  60
+        L 20,  50
+        L 30,  40
+        
+        M 70,  60
+        L 80,  50
+        L 70,  40
+        
+        M 60,  30
+        L 50,  20
+        L 40,  30
+        
+        M 60,  70
+        L 50,  80
+        L 40,  70
+      "
+    />
+  </svg>
+  
+  <svg :class="['node-control','node-control-resize',$style['node-control'],$style['node-control-resize']]" :x="Width - ColumnWidth * ControlScale" :y="Height - RowHeight * ControlScale" :width="ColumnWidth * ControlScale" :height="RowHeight * ControlScale" viewBox="0 0 100 100">
+    <path
+      d="
+        M 0,   0
+        L 100, 0
+        L 100, 100
+        L 0,   100
+        L 0,   0
+
+        M 20,  20
+        L 20,  40
+        
+        M 20,  20
+        L 40,  20
+        
+        M 20,  20
+        L 80,  80
+        
+        M 80,  80
+        L 60,  80
+        
+        M 80,  80
+        L 80,  60
+      "
+    />
+  </svg>
+</svg>

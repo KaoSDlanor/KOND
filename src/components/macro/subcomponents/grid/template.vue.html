@@ -1,0 +1,8 @@
+<g :class="['grid',$style.grid]">
+  <g class="horizontal">
+    <line v-for="LineY in ColumnLines" :y1="LineY" :y2="LineY" x1="0" x2="100%"></line>
+  </g>
+  <g class="vertical">
+    <line v-for="LineX in RowLines" :x1="LineX" :x2="LineX" y1="0" y2="100%"></line>
+  </g>
+</g>

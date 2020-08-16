@@ -1,0 +1,10 @@
+.macro >>> * {
+  vector-effect: non-scaling-stroke;
+}
+
+.select-box {
+  stroke: blue;
+  stroke-width: 2px;
+  stroke-dasharray: 3px 3px;
+  fill: none;
+}

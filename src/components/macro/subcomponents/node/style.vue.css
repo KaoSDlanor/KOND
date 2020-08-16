@@ -1,0 +1,43 @@
+.node {
+  stroke: black;
+  stroke-width: 2px;
+  fill: white;
+  overflow: visible;
+}
+.node.selected {
+  stroke: blue;
+}
+
+.node-label {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 30px;
+  font-family: arial;
+  line-height: 100%;
+  user-select: none;
+}
+
+.node-control {
+  overflow: visible;
+  transition: opacity .25s, transform .25s;
+}
+.node-control-edit {
+  transform: translate(calc(var(--control-width) * -.5px),calc(var(--control-height) * -.5px));
+}
+.node-control-move {
+  transform: translate(calc(var(--control-width) * .5px),calc(var(--control-height) * -.5px));
+}
+.node-control-resize {
+  transform: translate(calc(var(--control-width) * .5px),calc(var(--control-height) * .5px));
+}
+.node:not(:hover):not(.selected) .node-control {
+  opacity: 0;
+  transform: initial;
+  pointer-events: none;
+}

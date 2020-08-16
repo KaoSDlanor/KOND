@@ -1,0 +1,35 @@
+<svg
+  :class="['macro',$style.macro]"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/svg"
+  @mousedown.passive="DragStart($event)"
+  @mousemove.passive="DragMove($event)"
+  @mouseup.passive="DragEnd($event)"
+  viewBox="0 0 1000 1000"
+>
+  <svg
+    ref="svg-inner"
+    preserveAspectRatio="none"
+  >
+    <grid-component
+      :rows="Rows"
+      :columns="Columns"
+      :column-width="ColumnWidth"
+      :row-height="RowHeight"
+    ></grid-component>
+    <g class="links">
+
+    </g>
+    <g class="nodes" ref="node-group"></g>
+    <g class="overlay">
+      <rect
+        :class="['select-box',$style['select-box']]"
+        v-if="DragOperation === 'SELECT'"
+        :x="DragBounds[0] * ColumnWidth"
+        :y="DragBounds[1] * RowHeight"
+        :width="(DragBounds[2] + 1 - DragBounds[0]) * ColumnWidth"
+        :height="(DragBounds[3] + 1 - DragBounds[1]) * RowHeight"
+      ></rect>
+    </g>
+  </svg>
+</svg>
